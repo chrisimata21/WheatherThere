@@ -1,5 +1,4 @@
 # proj1
-chrisimata21
 
 Project title and description
 User Story
