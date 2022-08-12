@@ -1,0 +1,11 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-size: 50px;
+    text-align: center;
+    background-color: aqua;
+}
