@@ -4,6 +4,9 @@ Project title and description
 User Story
 
 
+# Project title and description
+
+
 Wireframe or sketch of the design
 
 
@@ -27,3 +30,6 @@ Issues created and assigned
 
 TODO by End of Day:
 In the group channel submit your Project Title, User Story, and Wireframe/Sketch of Website design/layout.
+
+Project title and description
+This application allows the user to input a location, when the location has been set, the app will then tell the user an approximate time of arrival and give weather conditions of said location. The application will also save the user's favorite locations of the user. . 
