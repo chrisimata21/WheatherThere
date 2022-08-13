@@ -10,6 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: aqua;
+    text-decoration: none;
 }
 .main-para {
     margin: 27px 10vw;
