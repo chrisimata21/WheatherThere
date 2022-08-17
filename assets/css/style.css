@@ -6,7 +6,7 @@
 
 header {
     padding: 0 10px;
-    font-size: 36px;
+    font-size: 30px;
     display: flex;
     justify-content: space-between;
     background-color: aqua;
@@ -17,4 +17,7 @@ header {
 }
 main {
     margin: 20px 10vw;
+}
+h1 {
+    text-align: center;
 }
