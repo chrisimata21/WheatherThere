@@ -3,9 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-.box {
-    opacity: 0.8;
-}
 header {
     padding: 0 10px;
     font-size: 30px;
@@ -28,9 +25,6 @@ main {
 }
 h1 {
     text-align: center;
-}
-.card {
-    opacity: .8;
 }
 .dest {
     text-align: center;
