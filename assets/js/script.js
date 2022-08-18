@@ -9,6 +9,11 @@ let searchCity = $("#search-city");
 let searchHistory = $("#search-history");
 let searchBtn = $("#btn"); 
 
+searchBtn.on("click", getCity);
+
+// list of city searches
+let searchCities = [];
+
 //save it in LS
 localStorage.setItem(search, history);
 
