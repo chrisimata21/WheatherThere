@@ -1,7 +1,7 @@
 //Live date and time server 
 function showTime() {
-    var currentDate = document.getElementById("current-date");
-    currentDate.textContent = moment().format('lll');
+  var currentDate = document.getElementById("current-date");
+  currentDate.textContent = moment().format('lll');
 } setInterval(showTime, 1000);
 
 // Search Items
@@ -13,6 +13,7 @@ searchBtn.on("click", getCity);
 
 // list of city searches
 let searchCities = [];
+
 
 //save it in LS
 localStorage.setItem(search, history);
@@ -51,3 +52,20 @@ let getLocationInfo = function(cityName) {
       }
     });
 }
+
+const options = {
+method: 'GET',
+url: 'https://google-maps28.p.rapidapi.com/maps/api/place/queryautocomplete/json',
+params: {input: 'pa', language: 'en'},
+headers: {
+  'X-RapidAPI-Key': '706abaea43msh336890f2b436a99p1e6e5cjsn5bbb1059416b',
+  'X-RapidAPI-Host': 'google-maps28.p.rapidapi.com'
+}
+};
+
+axios.request(options).then(function (response) {
+console.log(response.data);
+}).catch(function (error) {
+console.error(error);
+});
+
