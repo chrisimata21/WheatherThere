@@ -1,30 +1,34 @@
 # WheatherThere
- 
+
 # Table of contents
- 
-* Discription of application
 
-* How to use
+- [Discription of application][## description]
 
-* Links
+- How to use
 
-* Technologies
+- Links
 
-* Wireframe and sketch of design
+- Technologies
 
-* Contributors
+- Wireframe and sketch of design
 
-* Questions
- 
+- Contributors
+
+- Questions
+
 ## Description
 
 This application allows the user to input a location and future time of arrival (between 14 and 300 days out) and the app will give an estimated time of arrival as well as forecasted weather conditions of said location during future date. The application will also save the user's favorite locations of the user.
 
 ## How to use
-* Destination Seach Bar
-Place city name in search bar and press enter: the weather box will then be populated with a weather forecast for as early as 14 days and a maximum of 100 days into the future. 
-* Arrival Search bar
-Place begining address and ending address into search bar and press enter. The app will then give you an appoximate time to you destination 
+
+- Destination Seach Bar
+
+* Place city name in search bar and press enter: the weather box will then be populated with a weather forecast for as early as 14 days and a maximum of 100 days into the future.
+
+- Arrival Search bar
+
+* Place begining address and ending address into search bar and press enter. The app will then give you an appoximate time to you destination
 
 ## Technologies
 
@@ -48,20 +52,20 @@ Google Maps:
 ![Note Aug 10, 2022 (2)](https://user-images.githubusercontent.com/108028584/184062236-8fc0d845-b351-420b-b166-f9e23cbb1bba.jpg)
 challenges you faced and features you hope to implement in the future.
 
-## Contributors 
+## Contributors
 
-* Christopher Mata
+- Christopher Mata
 
-* Elizabeth Madrigal
+- Elizabeth Madrigal
 
-* Jared Saldate
+- Jared Saldate
 
-* Oleg Kibalko
+- Oleg Kibalko
 
 ## Questions
 
-* 
+-
+-
+-
 
-* 
-
-* 
+- > > > > > > > Stashed changes
