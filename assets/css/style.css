@@ -15,7 +15,7 @@ header {
 }
 
 body {
-    background-image: url("/assets/images/boston.jpg");
+    background-image: url("../images/boston.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
