@@ -52,19 +52,15 @@
           <p class="weather">Local Weather</p>
         </div>
 
-        <div class="card column">
-          <iframe
-            width="500"
-            height="350"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
         <div id = "map"></div> 
         
+        <style>
+          #map{
+            height: 350px;
+            width: 100%;
+           }
+        </style>
+
         <script>
           function initMap() {
             var options={ 
@@ -87,4 +83,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
-</html>
+</html> 
