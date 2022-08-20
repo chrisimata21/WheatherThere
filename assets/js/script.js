@@ -4,11 +4,19 @@ function showTime() {
   currentDate.textContent = moment().format('lll');
 } setInterval(showTime, 1000);
 
-$(document).ready(function () {
+// global Deferred variable
+function initialize() {
   window.gmap_async = $.getScript("https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize");
-  // global Deferred variable
-});
+};
 
+//function to load map 
+function initMap() {return map;
+}
+function initialize(initMap) {
+  var map = new google.maps.Map(document.getElementById('map'), options);
+ }
+
+// function to get location 
 function codeAddress() {
   window.gmap_async.done(function () {
       new google.maps.Geocoder().geocode({
