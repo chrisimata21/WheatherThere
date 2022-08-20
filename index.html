@@ -31,28 +31,35 @@
           inventore facere quidem libero iste veritatis.
         </p>
       </div>
-
       <!--Hero begins-->
-      <div class="box">
+      <section class="box">
         <form>
           <div class="field" id="dest-input">
             <input
-              type="input"
+              type="text"
               placeholder="Enter a Destination..."
               name="city"
               id="destination"
               class="dest"
             />
+            <button class="button" type="submit" id="btn">Submit</button>
           </div>
         </form>
-      </div>
-
-      <div class="columns is-mobile">
-        <div class="card column">
-          <p class="weather">Local Weather</p>
-        </div>
-
-        <div class="card column">
+      </section>
+      <!--Weather starts-->
+      <div class="flex">
+        <section class="current-weather card column">
+          <h2 class="city-name font-weight-bold">City Name (Current Day)</h2>
+          <div class="temp py-1">Temp:</div>
+          <div class="wind py-1">Wind:</div>
+          <div class="humidity py-1">Humidity:</div>
+          <div class="UV py-1">
+              <div>UV Index:</div>
+              <div class="UV-index px-2 ml-2 text-white rounded">0.47</div>
+          </div>
+        </section>
+      <!--Map starts-->
+        <section class="route-map card column">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199665.81813962827!2d-121.58299567692107!3d38.561918950823106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA!5e0!3m2!1sen!2sus!4v1660273253643!5m2!1sen!2sus"
             width="500"
@@ -62,14 +69,13 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
-        </div>
+        </section>
       </div>
     </main>
-
 <footer>
     &copy; 2022 WhetherThere
 </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
