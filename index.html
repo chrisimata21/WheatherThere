@@ -51,30 +51,45 @@
         <div class="card column">
           <p class="weather">Local Weather</p>
         </div>
+       
+        <div class="card column">
+          <iframe
+            width="500"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
 
         <div id = "map"></div> 
         
         <style>
           #map{
-            height: 350px;
-            width: 100%;
-           }
+            height:350px;
+            width:100%;
+            border: 0 
+            loading="lazy"
+        }
         </style>
 
         <script>
-          function initMap() {
-            var options={ 
-              zoom: 8,
-              center: {lat:52.3,lng:0.14
+          function initMap() {return map;
+          }
+            var options= { 
+              zoom: 13,
+              center: {lat:38.575764,lng:-121.478851
               }
             }
-            var map = new google.maps.Map(documentElementById('map'), options);
+            function initialize(initMap) {
+            var map = new google.maps.Map(document.getElementById('map'), options);
            }
         </script>
         
-        <script>
-          src="https://maps.googleapis.com/maps/api/js?key=706abaea43msh336890f2b436a99p1e6e5cjsn5bbb1059416b&callback=initMap"
-          </script>
+        <script async defer 
+          src="https://maps.googleapis.com/maps/api/js?key=706abaea43msh336890f2b436a99p1e6e5cjsn5bbb1059416b&callback=initMap">
+      </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
