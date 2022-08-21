@@ -9,12 +9,12 @@
   </head>
 
 <body>
-
-<h3 id="current-date"></h3>
     <header>
         <h1>WhetherThere</h1>
+        <p id="currentDay" class="lead text-center"></p>
         <h3><a target="_blank" href="https://github.com/chrisimata21/proj1">Repo</a></h3>
     </header>
+
     <main>
       <div class="box">
         <p>
@@ -32,73 +32,44 @@
         </p>
       </div>
 
-      <!--Hero begins-->
-      <div class="box">
-        <form>
-          <div class="field" id="dest-input">
-            <input
-              type="input"
-              placeholder="Enter a Destination..."
-              name="name"
-              id="destination"
-              class="dest"
-            />
+          <!--Hero begins-->
+          <div class="box">
+            <form>
+              <div class="field" id="dest-input">
+                <input
+                  type="input"
+                  placeholder="Enter a Destination..."
+                  name="city"
+                  id="destination"
+                  class="dest"
+                />
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-
-      <div class="columns is-mobile">
-        <div class="card column">
-          <p class="weather">Local Weather</p>
-        </div>
-       
-        <div class="card column">
-          <iframe
-            width="500"
-            height="350"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
-        <div id = "map"></div> 
-        
-        <style>
-          #map{
-            height:350px;
-            width:100%;
-            border: 0 
-            loading="lazy"
-        }
-        </style>
-
-        <script>
-          function initMap() {return map;
-          }
-            var options= { 
-              zoom: 13,
-              center: {lat:38.575764,lng:-121.478851
-              }
-            }
-            function initialize(initMap) {
-              function getElementById(map) {
-                
-               }
-            var map = new google.maps.Map(document.getElementById('map'), options);
-           }
-        </script>
-        
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=4adc483a00msh92ff6b233632700p1a8177jsn7ddd0d1cb3e2&callback=initMap"></script>
-
-<script> src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"</script> 
-<script> src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"</script>
-<script src="./assets/js/script.js"></script>
-
-<footer>
-    &copy; 2022 WhetherThere
-</footer>
-
+    
+          <div class="columns is-mobile">
+            <div class="card column">
+              <p class="weather">Local Weather</p>
+            </div>
+    
+            <div class="card column">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199665.81813962827!2d-121.58299567692107!3d38.561918950823106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA!5e0!3m2!1sen!2sus!4v1660273253643!5m2!1sen!2sus"
+                width="500"
+                height="350"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </main>
+    
+        <footer>&copy; 2022 WhetherThere</footer>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="./assets/js/script.js"></script>
 </body>
 </html>  

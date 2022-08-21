@@ -1,8 +1,14 @@
+// Moment JS
+var timeDisplay = document.querySelector("#currentDay");
+var currentTime = moment();
+
+timeDisplay.textContent = currentTime.format("MMMM Do YYYY, h:mm a");
+
 //Live date and time server 
-function showTime() {
-  var currentDate = document.getElementById("current-date");
-  currentDate.textContent = moment().format('lll');
-} setInterval(showTime, 1000);
+// function showTime() {
+//   var currentDate = document.getElementById("#current-date");
+//   currentDate.textContent = moment().format('lll');
+// } setInterval(showTime, 1000);
 
 // global Deferred variable
 function initialize() {
