@@ -1,84 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>WhetherThere</title>
-  </head>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>WhetherThere</title>
+</head>
 
 <body>
-   <header>
-     <h1>WhetherThere</h1>
-     <h3><a target="_blank" href="https://github.com/chrisimata21/proj1">Repo</a></h3>
-   </header>
+
+  <header>
+    <h1>WhetherThere</h1>
+    <h3><a target="_blank" href="https://github.com/chrisimata21/proj1">Repo</a></h3>
+  </header>
 
   <main>
+    <div class="box">
+      <p id="currentDay" class="lead text-center"></p>
+      <p>With the Weather there app you will have the knowledge for your upcoming trips and know how to pack appropriately for the occasion. With this search engine you will also know the approximate time it will take to get you to your destination so you don’t miss your reservation, appointments or flight. It's as simple as entering the name of the destination and the addresses into the search bar and VIOLA. You have the weather forecast and your estimated time of arrival.</p>
+    </div>
 
-      <div class="box">
-        <p id="currentDay" class="lead text-center"></p>
-        <p>
-     With the Weather there app you will have the knowledge for your upcoming trips and know how to pack appropriately for the occasion. With this search engine you will also know the approximate time it will take to get you to your destination so you don’t miss your reservation, appointments or flight.
-	It's as simple as entering the name of the destination and the addresses into the search bar and VIOLA. You have the weather forecast and your estimated time of arrival 
-
-        </p>
-      </div>
-      <!--Hero begins-->
-      <section class="box">
-        <form>
-          <div class="field" id="dest-input">
-
+    <!--Hero begins-->
+    <section class="box flex">
+      <form>
+        <div class="field" id="dest-input">
           <input
-              type="input"
+          type="input"
+          placeholder="Enter a Destination..."
+          name="name"
+          id="search-city"
+          />
+          <button id="btn" type="button">Search</button>
+        </div>
 
-              placeholder="Enter a Destination..."
-
-              name="name"
-              id="search-city"
-
-            />
-            <button class="button" type="submit" id="btn">Submit</button>
-          </div>
-          <button
-          id="btn"
-          type="button"
-        >
-          Search
-        </button>
         <!-- Current Day Info section-->
         <div class="current-day-info">
           <h2 class="city-name">City Name (Current Day)</h2>
           <div class="temp">Temp:</div>
           <div class="wind">Wind:</div>
+          <div class="" id="search-history">SEARCH HISTORY</div>
         </div>
-        </form>
+      </form>
+      <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" frameborder="0" scrolling="no" style="width: 600px; height: 400px;"></iframe><a href="https://fnfmod.org" style="display:none">fnf mods</a><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}</style><a href="https://googlemapsiframegenerator.com" style="display:none">Google Maps Iframe Generator - Free Html Embed Code</a><style>.gmap_canvas{overflow:hidden;background:none!important;height:400px;width:600px;}</style></div></div>
+    </section>
+
+    <!-- MAP -->
+
+    <!-- RESTAURANTS IN THE AREA -->
+    <div class="row">
+      <div class="card col s12 l6 offset-l1">
+        <h2 id="cityRestaurants"> Restaurants </h2>
       </div>
-
-    <div class="box">
-      <div id="search-history">SEARCH HISTORY</div>
+      <div id="geolocation">
+        <h3 id="your-destination"></h3>
+        <h2 id="city"></h2>
+        <p id="displayCity"></p>
+      </div>
     </div>
-
-  <!-- MAP -->
-  <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" frameborder="0" scrolling="no" style="width: 600px; height: 400px;"></iframe><a href="https://fnfmod.org" style="display:none">fnf mods</a><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}</style><a href="https://googlemapsiframegenerator.com" style="display:none">Google Maps Iframe Generator - Free Html Embed Code</a><style>.gmap_canvas{overflow:hidden;background:none!important;height:400px;width:600px;}</style></div></div>
-  <!-- RESTAURANTS IN THE AREA -->
-  <div class="row">
-    <div class="card col s12 l6 offset-l1">
-     <h2 id="cityRestaurants"> Restaurants </h2>
-
-
-
-        </div>
-
-
-        <div id="geolocation">
-            <h3 id="your-destination"></h3>
-            <h2 id="city"></h2>
-            <p id="displayCity"></p>
-          </div>
-          </div>
-        </div>
 <footer>
     &copy; 2022 WhetherThere
 </footer>

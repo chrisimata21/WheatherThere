@@ -53,3 +53,7 @@ h1 {
 .button {
     text-align: center;
 }
+
+.box {
+    justify-content: space-between;
+}
