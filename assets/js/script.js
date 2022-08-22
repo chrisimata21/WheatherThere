@@ -1,3 +1,21 @@
+var destInput = document.querySelector('#dest-input');
+var modalBg = document.querySelector('modal-bg')
+var modalClose = document.querySelector('modal-close')
+
+
+const inputFeilds = document.querySelectorAll('#dest-input');
+const validInputs = Array.from(inputFeilds).filter( input => input.value !== "");
+console.log(validInputs) //[array with valid inputs]
+
+destInput.addEventListener('click', function(){
+  modalBg.classList.add('bg-active')
+});
+
+modalClose.addEventListener('click', function(){
+  modalClose.classList.remove('bg-active')
+});
+
+
 function showTime() {
   var currentDate = document.getElementById("current-date");
   currentDate.textContent = moment().format('lll');
