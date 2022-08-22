@@ -8,75 +8,86 @@
     <title>WhetherThere</title>
   </head>
 
-<body>
 
-<h3 id="current-date"></h3>
-    <header>
-        <h1>WhetherThere</h1>
-        <h3><a target="_blank" href="https://github.com/chrisimata21/proj1">Repo</a></h3>
-    </header>
-    <main>
+<body>
+   <header>
+     <h1>WhetherThere</h1>
+     <h3><a target="_blank" href="https://github.com/chrisimata21/proj1">Repo</a></h3>
+   </header>
+
+  <main>
+
       <div class="box">
+        <p id="currentDay" class="lead text-center"></p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-          dolores ad animi quam iste provident voluptates deserunt! Dolore
-          assumenda, aliquam porro earum ad enim ea quod repellat mollitia in
-          pariatur, repellendus recusandae fugit quam vero iure. Amet facilis
-          eos voluptas ipsum? Suscipit ullam fugit inventore facere quidem
-          libero iste veritatis. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quaerat dolores ad animi quam iste provident
-          voluptates deserunt! Dolore assumenda, aliquam porro earum ad enim ea
-          quod repellat mollitia in pariatur, repellendus recusandae fugit quam
-          vero iure. Amet facilis eos voluptas ipsum? Suscipit ullam fugit
-          inventore facere quidem libero iste veritatis.
+     With the Weather there app you will have the knowledge for your upcoming trips and know how to pack appropriately for the occasion. With this search engine you will also know the approximate time it will take to get you to your destination so you don’t miss your reservation, appointments or flight.
+	It's as simple as entering the name of the destination and the addresses into the search bar and VIOLA. You have the weather forecast and your estimated time of arrival 
+
         </p>
       </div>
       <!--Hero begins-->
       <section class="box">
         <form>
           <div class="field" id="dest-input">
-            <input
-              type="text"
+
+          <input
+              type="input"
+
               placeholder="Enter a Destination..."
-              name="city"
-              id="destination"
-              class="dest"
+
+              name="name"
+              id="search-city"
+
             />
             <button class="button" type="submit" id="btn">Submit</button>
           </div>
+          <button
+          id="btn"
+          type="button"
+        >
+          Search
+        </button>
+        <!-- Current Day Info section-->
+        <div class="current-day-info">
+          <h2 class="city-name">City Name (Current Day)</h2>
+          <div class="temp">Temp:</div>
+          <div class="wind">Wind:</div>
+        </div>
         </form>
-      </section>
-      <!--Weather starts-->
-      <div class="flex">
-        <section class="current-weather card column">
-          <h2 class="city-name font-weight-bold">City Name (Current Day)</h2>
-          <div class="temp py-1">Temp:</div>
-          <div class="wind py-1">Wind:</div>
-          <div class="humidity py-1">Humidity:</div>
-          <div class="UV py-1">
-              <div>UV Index:</div>
-              <div class="UV-index px-2 ml-2 text-white rounded"></div>
-          </div>
-        </section>
-      <!--Map starts-->
-        <section class="route-map card column">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199665.81813962827!2d-121.58299567692107!3d38.561918950823106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA!5e0!3m2!1sen!2sus!4v1660273253643!5m2!1sen!2sus"
-            width="500"
-            height="350"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </section>
       </div>
-    </main>
+
+    <div class="box">
+      <div id="search-history">SEARCH HISTORY</div>
+    </div>
+
+  <!-- MAP -->
+  <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" frameborder="0" scrolling="no" style="width: 600px; height: 400px;"></iframe><a href="https://fnfmod.org" style="display:none">fnf mods</a><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}</style><a href="https://googlemapsiframegenerator.com" style="display:none">Google Maps Iframe Generator - Free Html Embed Code</a><style>.gmap_canvas{overflow:hidden;background:none!important;height:400px;width:600px;}</style></div></div>
+  <!-- RESTAURANTS IN THE AREA -->
+  <div class="row">
+    <div class="card col s12 l6 offset-l1">
+     <h2 id="cityRestaurants"> Restaurants </h2>
+
+
+
+        </div>
+
+
+        <div id="geolocation">
+            <h3 id="your-destination"></h3>
+            <h2 id="city"></h2>
+            <p id="displayCity"></p>
+          </div>
+          </div>
+        </div>
 <footer>
     &copy; 2022 WhetherThere
 </footer>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="./assets/js/restaurants.js"></script>
+<script src="./assets/js/geo.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
-</html>
+</html> 
+
