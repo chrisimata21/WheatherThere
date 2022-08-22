@@ -1,11 +1,6 @@
-var destInput = document.querySelector('#dest-input');
+var destInput = document.querySelector('.search-btn');
 var modalBg = document.querySelector('modal-bg')
-var modalClose = document.querySelector('modal-close')
-
-
-const inputFeilds = document.querySelectorAll('#dest-input');
-const validInputs = Array.from(inputFeilds).filter( input => input.value !== "");
-console.log(validInputs) //[array with valid inputs]
+var modalClose = document.querySelector('.modal-close')
 
 destInput.addEventListener('click', function(){
   modalBg.classList.add('bg-active')

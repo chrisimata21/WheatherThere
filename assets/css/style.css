@@ -56,7 +56,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: visibility 0s opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s opacity 0.5s; 
+
     
 }
 
@@ -76,11 +79,23 @@ opacity: 1;
     background-color: white;
     width: 17%;
     height: 17%;
-    display: flex;
+    display: flex;  
     justify-content: space-around;
     align-items:center;
     flex-direction: column;
     border: solid black;
+}
+
+.search-btn{
+    display: flex;
+    padding: 10px 30px;
+    background-color: #0e3a57;
+    color: white;
+    border: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-left: 43%;
 }
 
 .modal-close{
