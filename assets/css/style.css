@@ -45,3 +45,15 @@ h1 {
     width: 100%;
     margin-bottom: 15px;
 }
+
+.flex {
+    display: flex;
+}
+
+.button {
+    text-align: center;
+}
+
+.box {
+    justify-content: space-between;
+}

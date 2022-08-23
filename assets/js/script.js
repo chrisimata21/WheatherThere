@@ -4,15 +4,19 @@ var currentTime = moment();
 
 timeDisplay.textContent = currentTime.format("MMMM Do YYYY, h:mm a");
 
-const apiKey = 'bbefd399e3c1d1bea8905a2d056c2b8e'
+const apiKey = "bbefd399e3c1d1bea8905a2d056c2b8e";
 
 // Search Items
-let searchCity = $("#search-city");
-let searchHistory = $("#search-history");
-let searchBtn = $("#btn");
+const searchCity = $("#search-city");
+const searchHistory = $("#search-history");
+const searchBtn = $("#btn");
+
+// modal
+const modal = $(".modal");
+const modalBg = $(".modal-background");
 
 // Weather information item
-let weatherInfo = $(".weather-info")
+let weatherInfo = $(".weather-info");
 let currentDayInfo = $(".current-day-info");
 let forecastInfo = $(".forecast-info");
 
@@ -22,8 +26,7 @@ let searchCities = [];
 // function to get city from search bar
 let getCity = function () {
   if (!searchCity.val()) {
-    window.alert("No city was entered");
-    return;
+    modal.addClass("is-active");
   }
   let cityName = searchCity.val();
   searchCity.val("");
@@ -55,11 +58,11 @@ let getLocationInfo = function (cityName) {
           // Using latitude and longitude coordinates to get weather info
           getWeatherInfo(lat, lon);
         } else {
-          window.alert("Not a valid city or results not found");
+          modal.addClass("is-active");
         }
       });
     } else {
-      window.alert("Not a valid city or results not found");
+      modal.addClass("is-active");
     }
   });
 };
@@ -124,7 +127,6 @@ let getWeatherInfo = function (lat, lon) {
           .eq(0)
           .find(".wind")
           .text("Wind: " + data.current.wind_speed + "MPH");
-    
 
         // Putting in 5 day forecast info
         for (let i = 0; i < forecastInfo.length; i++) {
@@ -152,7 +154,7 @@ let getWeatherInfo = function (lat, lon) {
             .eq(i)
             .find(".forecast-wind")
             .text("Wind: " + data.daily[i + 1].wind_speed + "MPH");
-          }
+        }
         weatherInfo.removeClass("display-off");
       });
     }
@@ -168,7 +170,7 @@ searchHistory.on("click", ".search-history-item", function () {
     .find("h2")
     .text($(this).text() + " (" + moment().format("l") + ")");
 
-  // get latitude and longitude coodinates and use them to call getWeatherInfo
+  // get latitude and longitude coordinates and use them to call getWeatherInfo
   let apiUrl =
     "https://api.openweathermap.org/geo/1.0/direct?q=" +
     $(this).text() +
@@ -183,11 +185,11 @@ searchHistory.on("click", ".search-history-item", function () {
           let lon = data[0]["lon"];
           getWeatherInfo(lat, lon);
         } else {
-          window.alert("Not a valid city or results not found");
+          modal.addClass("is-active");
         }
       });
     } else {
-      window.alert("Not a valid city or results not found");
+      modal.addClass("is-active");
     }
   });
 });
@@ -204,3 +206,6 @@ window.onload = function () {
     searchCities = [];
   }
 };
+modalBg.click(function () {
+  modal.removeClass("is-active");
+});
