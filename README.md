@@ -1,6 +1,6 @@
 # WheatherThere
 
-# Table of contents
+## Table of contents
 
 - [Description of application](#description)
 
@@ -18,10 +18,10 @@ This application allows the user to input a location and future time of arrival 
 
 ## How to use
 
-- Destination Seach Bar
+- Destination Search Bar
   Place city name in search bar and press enter: the weather box will then be populated with a weather forecast for as early as 14 days and a maximum of 100 days into the future.
 - Arrival Search bar
-  Place begining address and ending address into search bar and press enter. The app will then give you an appoximate time to you destination
+  Place beginning address and ending address into search bar and press enter. The app will then give you an approximate time to you destination
 
 ## Technologies
 
